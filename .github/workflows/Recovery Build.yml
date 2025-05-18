@@ -43,7 +43,7 @@ on:
         default: 'recovery'
 
 jobs:
-  build:
+    build:
     if: github.event.repository.owner.id == github.event.sender.id
     runs-on: ubuntu-latest
     permissions:
