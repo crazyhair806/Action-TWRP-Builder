@@ -49,10 +49,11 @@ jobs:
     permissions:
       contents: write
     steps:
-    name: Prepare the environment
+    - name: Prepare the environment 
+      run: echo "Setting up environment..."
     
-    run: |
-        sudo dpkg --add-architecture i386
+
+         sudo dpkg --add-architecture i386
         sudo apt update
         sudo apt -y upgrade
         sudo apt -y install gperf gcc-multilib gcc-10-multilib g++-multilib g++-10-multilib libc6-dev \
